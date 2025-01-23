@@ -1,0 +1,52 @@
+{
+   "homeData": [
+      {
+        "img": {"path": "./lightbulb.webp", "alt":"Image of a lightbulb", "side":"left"},
+        "title": "### Strategy",
+        "textbullets": [
+          "**Materiality assessments** to identify areas for focusing a company's sustainability efforts",
+          "**Sustainability strategy** with goals and key performance indicators",
+          "**Climate strategy** with GHG measurement, reporting, goals, and improvement",
+          "**Benchmarking, landscape analysis, and recommendations** for meeting customer requirements and voluntary standards"
+        ] 
+      },
+      { 
+        "img": {"path": "./field.webp", "alt":"Image of a field", "side":"right"},
+        "title": "### Implementation",
+        "textbullets": [
+            "**Materials sourcing policy** for products and packaging informed by sustainability assessments of materials", 
+            "**RSL program implementation** to manage restricted substances and chemicals of concern",
+            "**Supply chain sustainability programs** for risk assessment, performance benchmarking, and continuous improvement",
+            "**Assessment and certification support** for companies including manufacturing facilities"
+        ] 
+      },
+      { 
+        "img": {"path": "./city.webp", "alt":"Image of a city skyline", "side":"left"},
+        "title": "### Communication",
+        "textbullets": [
+            "Content for **reports, website, blog, social media**",
+            "Substantiation of **product claims**",
+            "Development of **supplier letters and manuals**",
+            "**Educational speaking**, workshops, and facilitation"
+        ] 
+      },
+      {
+        "img": {"path": "./city.webp", "alt":"Image of a city skyline", "side":"right"}, 
+        "title": "### Advisory",
+        "textbullets": [
+            "Standards and certifications",
+            "Measurement and assessment tools",
+            "Technology solutions",
+            "Job descriptions and hiring"
+        ] 
+      }
+    ],
+    "aboutData": 
+      {
+        "imgpath": "./headshot_transparent.png", 
+        "heading": "About Todd Copeland, Owner & Founder",
+        "bio": "Copeland Consultancy was founded in 2020 \n by **Todd Copeland** who spent fourteen years of his career at the sustainability-leading outdoor clothing company **Patagonia**, where he implemented and managed programs to reduce Patagonia's environmental impacts and create more sustainable products. He has worked on and led projects to nominate environmentally preferred materials, eliminate toxic chemicals, take end-of-life responsibility for products, and implement sustainability measurement tools such as the **Higg Index**. His professional background is in materials research and development, including 5 years at **Honda** R&D Americas, and he has an engineering degree in Polymer & Textile Chemistry from **Georgia Tech**.\n Todd is a sustainability advisor to the Outdoor Industry Association and has co-taught undergraduate courses on Environmental Studies at the University of California Santa Barbara. Todd has experience engaging directly with entire supply chains, from retailers to manufacturers to chemical producers and farms. He has visited around 200 factories and over 50 farms across 37 different countries and has also worked extensively with service providers, consultants, educators, and non-profit organizations. Through his career Todd has innovated and patented material applications, developed material sourcing policies, restricted substances (RSL) programs, and supplier assessment/improvement programs for chemical and environmental impacts. He has worked on closed-loop recycling initiatives, green chemistry certifications, animal welfare standards, regenerative and organic agriculture standards, traceable supply chains, and climate leadership strategies. Todd has trained as an auditor for quality and environmental standards (including ISO 9001/14001 management systems) and has broad experience as an educator and a public speaker on both technical and non-technical topics.",
+        "logopath": "./logo.png",
+        "about": "- **Advising** organizations on the various aspects of sustainability such as strategy, programs, products, materials, chemicals, supply chains, and communication.\n - **Connecting** big ideas and systems thinking with practical solutions, bringing experience and expertise to address even the most challenging aspects of any organization’s sustainability ambitions.\n - **Helping** companies solve global sustainability challenges through multi-stakeholder collaboration, green chemistry, materials innovation, and efficient manufacturing technology. "
+      }
+}

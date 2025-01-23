@@ -1,0 +1,21 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./variables.scss";
+
+
+h1 {
+  color: $kyle-color;
+}
+
+button {
+  color: #fff;
+  background-color: $kyle-color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+
+  &:hover{
+    color: $kyle-color;
+    background-color: #ffff;
+    border: 1px solid $kyle-color;
+  }
+}

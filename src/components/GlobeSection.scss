@@ -1,0 +1,131 @@
+@import "../sass/_variables.scss";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+
+
+.globeContainer{
+    position:relative;
+    top: -225px;
+    left: -200px;
+    height:100px;
+    padding:0px;
+    z-index:-1;
+}
+
+#vid-overlay.card{
+    
+    margin-left: 20%;
+    margin-top: 50px;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    //background-color: $kyle-color;
+}
+
+.star-bg{
+    position: absolute;
+    height: 100%;
+    left:-24px;
+    background: url('./star-field.png');
+    z-index:-2;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding: 0px;
+  }
+
+#card-text.card-body{
+    color: white;
+    text-shadow: 2px 2px black;
+    padding-top: 10px;
+}
+
+.card-body .vid-overlay-btn{
+    background-color: rgba(252, 193, 0);
+}
+
+#card-btn{
+    margin-top: 20px;
+
+    text-shadow: none;
+}
+
+@include media-breakpoint-up(xs) {
+    .globeContainer{
+        // margin-left: -160px;
+        //background-color: grey;
+        left: -155px;
+    }
+
+    #vid-overlay.card {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        width: 250px;
+        height: 240px;
+    }
+    
+}
+@include media-breakpoint-up(sm) {
+    .globeContainer{
+        //background-color: red;
+        left: -155px;
+    }
+    
+}
+@include media-breakpoint-up(md) {
+    .globeContainer{
+        //background-color: pink;
+        left: 0px;
+    }
+
+    #vid-overlay.card {
+        margin-left: 50%;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        width: 320px;
+        height: 210px;
+    }
+    
+}
+@include media-breakpoint-up(lg) {
+    .globeContainer{
+        //background-color: blue;
+        left:110px;
+    }
+
+    #vid-overlay.card {
+        margin-left: 55%;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        width: 320px;
+        height: 210px;
+    }
+    
+}
+@include media-breakpoint-up(xl) {
+    .globeContainer{
+        //background-color: purple;
+        left:220px;
+        // margin-left: 220px;
+    }
+    
+}
+@include media-breakpoint-up(xxl) {
+    .globeContainer{
+        //background-color: orange;
+        left: 30%;
+    }
+    
+    #vid-overlay.card {
+        margin-left: 48%;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        width: 400px;
+        height: 180px;
+    }
+}
+
+
+
+
+

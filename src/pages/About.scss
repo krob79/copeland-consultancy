@@ -1,0 +1,262 @@
+@import "../sass/_variables.scss";
+@import "../../node_modules/bootstrap/scss/mixins/breakpoints";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+$about-background-height: 40vh;
+
+#bio-container{
+    position: relative;
+    width:100%;
+    top: 0;
+    height: $about-background-height;
+    background-color: black;
+    overflow: auto;
+}
+
+#bio-image{
+    padding: 0px; /* control the space for the gradient */
+    // background: repeating-linear-gradient(45deg,#FF6B6B 0 10px,#4ECDC4 0 20px);
+    // -webkit-mask:
+    // radial-gradient(at 50% 20%,#d90404 70%,#1b03d300 71%) content-box 50% 50%/var(--_s,10% 10%) no-repeat, linear-gradient(#000 0 0);
+    // -webkit-mask-composite: xor;
+    // mask-composite: exclude;
+    transition: .5s;
+}
+
+img.headshot-transparent {
+    height: 90%;
+    width: auto;
+    position: absolute;
+    // left:5%;
+    bottom: 0px;
+    // display:none;
+}
+
+.headshot-transparent{
+    position: relative;
+    z-index: 1;
+}
+
+//adding the mask class to the image will grow the mask to 150% of the image size
+//removing the mask class from the classList will shrink it back
+#bio-image.mask {
+    // --_s: 150% 150%;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+.bodoni-moda-sc-aboutTitle {
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bio-background{
+    position: absolute;
+    top: 0px;
+    margin-left:0px;
+    height: $about-background-height;
+    width: 100%;
+    left: 0px;
+    background-image: url('./headshot_long_bg.png');
+    background-repeat: no-repeat;
+    z-index: -1;
+    // background-size: cover;
+}
+
+.stripe{
+    width: 100%;
+    height: 10px;
+}
+
+#bio-text-container{
+    height:100%;
+    overflow: scroll;
+    -ms-overflow-style: 2px;  /* IE and Edge */
+    scrollbar-width: 2px;  /* Firefox */
+}
+
+#bio-text-container::-webkit-scrollbar{
+    display: none;
+}
+
+.bio-text{
+    //display:none;
+    position: relative;
+    top: 300px;
+    width: 300px;
+    margin-left: 100px;
+    padding: 20px 20px;
+    color:grey;
+}
+
+.bio-text2{
+    position: relative;
+    width: 300px;
+    margin-left: 100px;
+    padding: 20px 20px;
+    color:grey;
+}
+
+@include media-breakpoint-up(xs) {
+    .bio-text{
+        width:100%;
+        margin-left:0px;
+        position:static;
+    }
+    #bio-text-container{
+        display:none;
+    }
+    .stripe{
+        background-color: red;
+    }
+    img.headshot-transparent {
+        height: 88%;
+        width: auto;
+        position: absolute;
+        // left:25%;
+        // transform:translateX(-50%);
+        bottom: 0px;
+        // display:none;
+    }
+    
+    [data-aos="img-transition-in"] {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition-property: left, transform, opacity;
+        &.aos-animate {
+            left:50%;
+            transform:translateX(-50%);
+            opacity: 1;
+        }
+    }
+
+    [data-aos="bg-transition-in"] {
+        left: 0%;
+        transform: translateX(0%);
+        opacity: 0;
+        transition-property: left, transform, opacity;
+        &.aos-animate {
+            left:0%;
+            transform:translateX(-2%);
+            opacity: 1;
+        }
+    }
+
+    [data-aos="text-transition-in"] {
+        opacity: 0;
+        transition-property: left, transform, opacity;
+        &.aos-animate {
+            opacity: 1;
+        }
+    }
+    
+}
+@include media-breakpoint-up(sm) {
+    .stripe{
+        background-color: orange;
+    }
+    
+    
+}
+@include media-breakpoint-up(md) {
+    .stripe{
+        background-color: yellow;
+    }
+    #bio-text-container{
+        display:block;
+    }
+    #bio-text-container2{
+        display:none;
+    }
+
+    .bio-text{
+        top: 20px;
+        width:40%;
+        margin-left:0px;
+        left:50%;
+        transform:translateX(10%);
+        position:relative;
+    }
+
+    img.headshot-transparent {
+        height: 95%;
+        width: auto;
+        position: absolute;
+        left:10%;
+        transform:translateX(-20%);
+        bottom: 0px;
+        // display:none;
+    }
+    
+    [data-aos="img-transition-in"] {
+        left: 10%;
+        transform: translateX(10%);
+        opacity: 0;
+        transition-property: left, transform, opacity;
+        &.aos-animate {
+            left:20%;
+            transform:translateX(-20%);
+            opacity: 1;
+        }
+    }
+    
+    
+}
+@include media-breakpoint-up(lg) {
+    .stripe{
+        background-color: green;
+    }
+
+    .bio-text{
+        top: 20px;
+        width:50%;
+        margin-left:0px;
+        left:38%;
+        transform:translateX(5%);
+        position:relative;
+    }
+
+    [data-aos="img-transition-in"] {
+        left: 10%;
+        transform: translateX(10%);
+        opacity: 0;
+        transition-property: left, transform, opacity;
+        &.aos-animate {
+            left:15%;
+            transform:translateX(-20%);
+            opacity: 1;
+        }
+    }
+    
+    
+}
+@include media-breakpoint-up(xl) {
+    .stripe{
+        background-color: blue;
+    }
+
+    [data-aos="img-transition-in"] {
+        left: 10%;
+        transform: translateX(10%);
+        opacity: 0;
+        transition-property: left, transform, opacity;
+        &.aos-animate {
+            left:20%;
+            transform:translateX(-20%);
+            opacity: 1;
+        }
+    }
+    
+    
+}
+@include media-breakpoint-up(xxl) {
+    .stripe{
+        background-color: purple;
+    }
+    
+}
