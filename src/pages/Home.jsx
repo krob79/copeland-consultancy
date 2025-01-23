@@ -22,7 +22,7 @@ function Home({data}) {
         </div>
         <div className='container-fluid bg-white'>
             <div className='container p-5'>
-                <Heading text={"Consultation Services"} />
+                <Heading text={"Consultation Services - TEST GITHUB"} />
                 {
                     data.map((element, index) => (
                         <DualColumnSection element={element} key={index} />

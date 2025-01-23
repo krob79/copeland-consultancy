@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://krob79.github.io/copeland-consultancy",
   "watches": {
     "sass": "sass/**"
   },
@@ -13,6 +14,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "dev": "vite --host 0.0.0.0",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watchsass": "sass src/sass:src/css -w"
   },
   "dependencies": {
@@ -34,6 +37,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.83.4",
