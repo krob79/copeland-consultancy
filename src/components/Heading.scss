@@ -1,0 +1,23 @@
+.heading {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #9e9800;
+  display:flex;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+.heading::before,
+.heading::after {
+  display: block;
+  content: "";
+  border-bottom: 2px solid #b7b242;
+  flex: 1;
+}
+.heading::before{
+  margin-right: 1rem;
+}
+.heading::after{
+  margin-left: 1rem;
+}

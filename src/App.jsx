@@ -8,12 +8,12 @@ import Contact from './pages/Contact';
 import TestPage from './pages/TestPage';
 import './css/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer';
 
 
 function App() {
-  const {homeData, aboutData, globeData} = data;
+  const {homeData, aboutData} = data;
   
-  console.log(aboutData);
   return (
     <BrowserRouter>
       <Header />
@@ -24,6 +24,7 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

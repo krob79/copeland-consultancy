@@ -6,44 +6,45 @@
 
 $about-background-height: 40vh;
 
-#bio-container{
+.container-fluid{
+    //border: 1px solid red;
     position: relative;
-    width:100%;
-    top: 0;
-    height: $about-background-height;
-    background-color: black;
-    overflow: auto;
+}
+
+.bio-row{
+    position: relative;
+    // max-height: 400px;
+    background-image: url('./headshot_long_bg.png');
+    background-repeat: no-repeat;
+}
+
+#text-window{
+    position: absolute;
+    overflow:scroll;
+    top: 20px;
+    left: 45%;
+    width: 50%;
+    height: 90%;
+    // transform:translateX(-25%);
 }
 
 #bio-image{
-    padding: 0px; /* control the space for the gradient */
-    // background: repeating-linear-gradient(45deg,#FF6B6B 0 10px,#4ECDC4 0 20px);
-    // -webkit-mask:
-    // radial-gradient(at 50% 20%,#d90404 70%,#1b03d300 71%) content-box 50% 50%/var(--_s,10% 10%) no-repeat, linear-gradient(#000 0 0);
-    // -webkit-mask-composite: xor;
-    // mask-composite: exclude;
-    transition: .5s;
-}
-
-img.headshot-transparent {
-    height: 90%;
-    width: auto;
-    position: absolute;
-    // left:5%;
-    bottom: 0px;
-    // display:none;
-}
-
-.headshot-transparent{
-    position: relative;
+    width:100%;
+    max-width: 600px;
     z-index: 1;
+    position:relative;
+    //display: none;
+    // top: 100%;
+    //left: 25%;
+    // transform:translateY(-100%);
+    // padding: 0px; /* control the space for the gradient */
+    // height: 30%;
+    // max-height: 400px;
+    // height: auto;
+    // transition: .5s;
 }
 
-//adding the mask class to the image will grow the mask to 150% of the image size
-//removing the mask class from the classList will shrink it back
-#bio-image.mask {
-    // --_s: 150% 150%;
-}
+
 
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 400 to 900
@@ -54,73 +55,37 @@ img.headshot-transparent {
     font-style: normal;
 }
 
-.bio-background{
-    position: absolute;
-    top: 0px;
-    margin-left:0px;
-    height: $about-background-height;
-    width: 100%;
-    left: 0px;
-    background-image: url('./headshot_long_bg.png');
-    background-repeat: no-repeat;
-    z-index: -1;
-    // background-size: cover;
+#bio-text-container::-webkit-scrollbar{
+    display: none;
+}
+
+//2 different versions of text - 1 to display along side bio image in an adjacent column, 2 to display below the image
+.bio-text{
+    padding-top: 10%;
+    position: relative;
+    z-index: 2;
+    color:grey;
 }
 
 .stripe{
     width: 100%;
     height: 10px;
+    z-index: 3;
 }
 
-#bio-text-container{
-    height:100%;
-    overflow: scroll;
-    -ms-overflow-style: 2px;  /* IE and Edge */
-    scrollbar-width: 2px;  /* Firefox */
-}
-
-#bio-text-container::-webkit-scrollbar{
-    display: none;
-}
-
-.bio-text{
-    //display:none;
-    position: relative;
-    top: 300px;
-    width: 300px;
-    margin-left: 100px;
-    padding: 20px 20px;
-    color:grey;
-}
-
-.bio-text2{
-    position: relative;
-    width: 300px;
-    margin-left: 100px;
-    padding: 20px 20px;
-    color:grey;
-}
 
 @include media-breakpoint-up(xs) {
-    .bio-text{
-        width:100%;
-        margin-left:0px;
-        position:static;
-    }
-    #bio-text-container{
-        display:none;
-    }
     .stripe{
         background-color: red;
     }
-    img.headshot-transparent {
-        height: 88%;
-        width: auto;
-        position: absolute;
-        // left:25%;
-        // transform:translateX(-50%);
-        bottom: 0px;
-        // display:none;
+    .bio-text{
+       
+    }
+    #bio1{
+        display:none;
+    }
+    #bio2{
+        display:block;
     }
     
     [data-aos="img-transition-in"] {
@@ -131,18 +96,6 @@ img.headshot-transparent {
         &.aos-animate {
             left:50%;
             transform:translateX(-50%);
-            opacity: 1;
-        }
-    }
-
-    [data-aos="bg-transition-in"] {
-        left: 0%;
-        transform: translateX(0%);
-        opacity: 0;
-        transition-property: left, transform, opacity;
-        &.aos-animate {
-            left:0%;
-            transform:translateX(-2%);
             opacity: 1;
         }
     }
@@ -167,30 +120,19 @@ img.headshot-transparent {
     .stripe{
         background-color: yellow;
     }
-    #bio-text-container{
-        display:block;
+    .bio-row{
+        // max-height: 345px;
     }
-    #bio-text-container2{
+    #bio1{
+        display:block;
+        height: 30%;
+    }
+    #bio2{
         display:none;
     }
 
     .bio-text{
-        top: 20px;
-        width:40%;
-        margin-left:0px;
-        left:50%;
-        transform:translateX(10%);
-        position:relative;
-    }
-
-    img.headshot-transparent {
-        height: 95%;
-        width: auto;
-        position: absolute;
-        left:10%;
-        transform:translateX(-20%);
-        bottom: 0px;
-        // display:none;
+        
     }
     
     [data-aos="img-transition-in"] {
@@ -213,12 +155,7 @@ img.headshot-transparent {
     }
 
     .bio-text{
-        top: 20px;
-        width:50%;
-        margin-left:0px;
-        left:38%;
-        transform:translateX(5%);
-        position:relative;
+         
     }
 
     [data-aos="img-transition-in"] {

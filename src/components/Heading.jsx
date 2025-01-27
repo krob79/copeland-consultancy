@@ -1,10 +1,13 @@
-import '../css/App.css'
+import './Heading.scss';
 
 function Heading({text}) {
 
   return (
     <>
-      <h2 className="heading">{text}</h2>
+      <div className="container p-2">
+          <h2 className="heading">{text}</h2>
+      </div>
+      
     </>
   )
 }

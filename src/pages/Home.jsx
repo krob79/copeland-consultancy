@@ -16,13 +16,16 @@ function Home({data}) {
   return (
     <>
         <div className="container-fluid">
-          <div className="row">
-            <GlobeSection />
+          <div className="row globe-row">
+            <div className="col">
+              <GlobeSection />
+            </div>
+            
           </div>
         </div>
         <div className='container-fluid bg-white'>
             <div className='container p-5'>
-                <Heading text={"Consultation Services - TEST GITHUB"} />
+                <Heading text={"Consultation Services"} />
                 {
                     data.map((element, index) => (
                         <DualColumnSection element={element} key={index} />
@@ -30,7 +33,6 @@ function Home({data}) {
                 }
             </div>
         </div>
-        
     </>
   )
 }

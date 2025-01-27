@@ -1,24 +1,68 @@
 @import "../sass/_variables.scss";
 @import "../../node_modules/bootstrap/scss/mixins/breakpoints";
 
+// @import "../../node_modules/bootstrap/scss/card";
+
+$card-width: 250px;
+$card-height: 220px;
+
 
 
 .globeContainer{
     position:relative;
     top: -225px;
     left: -200px;
-    height:100px;
+    // height:100px;
     padding:0px;
     z-index:-1;
 }
 
 #vid-overlay.card{
+    // margin-left: 20%;
+    // top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: $card-width;
+    height: $card-height;
     
-    margin-left: 20%;
-    margin-top: 50px;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.3);
-    //background-color: $kyle-color;
+    background-color: rgba(255, 255, 255, 0);
+    // overflow: hidden;
+    padding: 20px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+#vid-overlay-text.card-body{
+    color: white;
+    text-shadow: 1px 1px black;
+    padding-top: 10px;
+    z-index: 1;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.card-body .vid-overlay-btn{
+    border-left: $button-border-color;
+    background-color: $button-color;
+}
+
+#card-btn{
+    margin-top: 20px;
+    text-shadow: none;
+}
+
+#vid-overlay-bg{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.65);
+    border-left: 1px solid rgba(255, 255, 255, 0.65);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 0px 10px grey;
+    backdrop-filter: blur(4px);
 }
 
 .star-bg{
@@ -32,94 +76,69 @@
     padding: 0px;
   }
 
-#card-text.card-body{
-    color: white;
-    text-shadow: 2px 2px black;
-    padding-top: 10px;
-}
 
-.card-body .vid-overlay-btn{
-    background-color: rgba(252, 193, 0);
-}
-
-#card-btn{
-    margin-top: 20px;
-
-    text-shadow: none;
-}
 
 @include media-breakpoint-up(xs) {
     .globeContainer{
         // margin-left: -160px;
-        //background-color: grey;
         left: -155px;
     }
 
     #vid-overlay.card {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 50px;
-        margin-bottom: 0px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         width: 250px;
-        height: 240px;
+        height: 200px;
     }
     
 }
 @include media-breakpoint-up(sm) {
     .globeContainer{
-        //background-color: red;
         left: -155px;
     }
     
 }
 @include media-breakpoint-up(md) {
     .globeContainer{
-        //background-color: pink;
-        left: 0px;
+        top: -260px;
+        left: 260px;
     }
 
     #vid-overlay.card {
-        margin-left: 50%;
+        width: 380px;
+        height: 170px;
         margin-top: 50px;
-        margin-bottom: 0px;
-        width: 320px;
-        height: 210px;
+        margin-bottom: 50px;
+        transform: translateX(-100%);
     }
     
 }
 @include media-breakpoint-up(lg) {
     .globeContainer{
-        //background-color: blue;
-        left:110px;
+        top: -285px;
+        left: 360px;
     }
 
     #vid-overlay.card {
-        margin-left: 55%;
-        margin-top: 50px;
-        margin-bottom: 0px;
-        width: 320px;
-        height: 210px;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        width: 380px;
+        height: 180px;
     }
     
 }
 @include media-breakpoint-up(xl) {
     .globeContainer{
-        //background-color: purple;
         left:220px;
-        // margin-left: 220px;
     }
     
 }
 @include media-breakpoint-up(xxl) {
     .globeContainer{
-        //background-color: orange;
         left: 30%;
     }
     
     #vid-overlay.card {
-        margin-left: 48%;
-        margin-top: 50px;
-        margin-bottom: 0px;
         width: 400px;
         height: 180px;
     }
